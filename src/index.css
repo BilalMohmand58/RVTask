@@ -1,0 +1,85 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 217 33% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 35 92% 51%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 0 74% 51%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 27%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 217 33% 27%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 30%;
+    --input: 217 33% 30%;
+    --ring: 35 92% 51%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-movie-background text-movie-text;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.movie-poster {
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+.movie-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+}
+
+.rating-stars {
+  display: flex;
+}
+
+.rating-star {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating-star.filled {
+  color: #F59E0B;
+}
+
+.rating-star:hover {
+  color: #F59E0B;
+}
